@@ -2,6 +2,7 @@ package com.mybank.reportingservice;
 
 import java.math.BigDecimal;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -44,8 +45,9 @@ class ReportingserviceApplicationTests {
 				.contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
 				.header("accountId", "AccountId"))
 				.andReturn();
-		
 		System.out.println("Component are integrated :"+result.getResponse().getContentAsString());
+		Assertions.assertTrue(200==result.getResponse().getStatus());
+		
 	}
 
 }
