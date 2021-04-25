@@ -21,21 +21,21 @@
 ~~~
 1. Transaction Details for a AccountId [GET]:
    - This endpoint is used to get all  trasactions details  for a accountId.Please refer below sample request and attribute details.
-        Request:
-        Header - accountId: <Account number generated in create call> e.g: 1618755265713
-        URL : http://localhost:<server.port>/reporting
-	  Response:
-			[{
-			  "transactionId": "1618756518024",
-			  "customerId": "lkachhwah",
-			  "accountId": "1618755265713",
-			  "transactionType": "OUT",
-			  "description": "Token Amount",
-			  "trasactionDate": "2021-04-18T14:35:18.024+00:00", 
-			  "amount": 10,
-			  "status": "SUCCESS",
-			  "transactionCurrency": "EUR",
-			  "accountBalance": "72.65",  - remaining balance after operation in transactionCurrency.
-			  "accountBalanceInUSD": "87.51" - remaining balance after operation in USD.
-			}]
+      * Request:
+      * Header - accountId: <Account number generated in create call> e.g: 1618755265713
+      * URL : http://localhost:<server.port>/reporting
+      * Response:
+	[{
+	  "transactionId": "1618756518024",
+	  "customerId": "lkachhwah",
+	  "accountId": "1618755265713",
+	  "transactionType": "OUT",
+	  "description": "Token Amount",
+	  "trasactionDate": "2021-04-18T14:35:18.024+00:00", 
+	  "amount": 10,
+	  "status": "SUCCESS",
+	  "transactionCurrency": "EUR",
+	  "accountBalance": "72.65",  - remaining balance after operation in transactionCurrency.
+	  "accountBalanceInUSD": "87.51" - remaining balance after operation in USD.
+	}]
 ~~~
