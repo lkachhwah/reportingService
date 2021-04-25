@@ -13,14 +13,19 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mybank.reportingservice.db.mapper.AuditDetailMapper;
 import com.mybank.reportingservice.db.model.AuditDetail;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping("/reporting")
+@Api(produces = "application/json", value = "Operations to fetch reportinf details ")
 public class ReportingController {
 
 	@Autowired
 	AuditDetailMapper acccountMapper;
 
 	@GetMapping
+	@ApiOperation(value = "This end point is use to get All Transaction based on Account number")
 	public List<AuditDetail> getAllTransaction(@RequestHeader String accountId) {
 		List<AuditDetail> details = acccountMapper.getAccountTransactionDetails(accountId);
 		return CollectionUtils.isEmpty(details) ? new ArrayList<AuditDetail>() : details;
