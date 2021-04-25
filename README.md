@@ -1,9 +1,10 @@
-#Pre install software need:
-Rabbit MQ
-MVN
-Java 8 JDK
+## Pre install software need:
+* Rabbit MQ
+* MVN
+* Java 8 JDK
 
-#Steps To Run:
+## Steps To Run:
+~~~
 1.check out Project from repository : https://github.com/lkachhwah/accountService.git ,using git .
 2.Check above Software are installed and keep rabbit MQ up and running.
 3. Go to application.properties 
@@ -15,7 +16,7 @@ Java 8 JDK
 6. Verification step check log And we should be able see log : "*************Started************" .
 7. Open the swagger ui : localhost:<server.port>/swagger-ui.html
 8. This application act as listener to event publish by transaction service.
-
+~~~
 #Operation Details
 1Transaction Details for a AccountId [GET]:
    - This endpoint is used to get all  trasactions details  for a accountId.Please refer below sample request and attribute details.
